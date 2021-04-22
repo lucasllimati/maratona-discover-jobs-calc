@@ -43,7 +43,7 @@ Você pode visualizar o layout do projeto através [desse link](https://www.figm
 
 ## 📦 Instalação
 
-npm install express
+\`npm install express
 
 ## Comunidade Rocketseat
 Rocketseat :wave: [Participe da nossa comunidade!](https://discordapp.com/invite/gCRAFhc)
