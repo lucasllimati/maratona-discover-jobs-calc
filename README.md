@@ -18,7 +18,7 @@
 <br>
 
 <p align="center">
-  <img alt="dev.finances" src="./images/jobscalc.png" width="100%">
+  <img alt="jobscalc" src="./public/images/jobscalc.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -49,7 +49,7 @@ npm install express
 Rocketseat :wave: [Participe da nossa comunidade!](https://discordapp.com/invite/gCRAFhc)
 
 ## :memo: Licença
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.mit) para mais detalhes.
 
 ---
 
