@@ -43,13 +43,13 @@ Você pode visualizar o layout do projeto através [desse link](https://www.figm
 
 ## 📦 Instalação
 
-npm install express
+`npm install express`
 
 ## Comunidade Rocketseat
 Rocketseat :wave: [Participe da nossa comunidade!](https://discordapp.com/invite/gCRAFhc)
 
 ## :memo: Licença
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.mit) para mais detalhes.
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
 
