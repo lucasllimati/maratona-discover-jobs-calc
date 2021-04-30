@@ -1,60 +1,14 @@
 const express = require('express');
 const routes = express.Router();
+const ProfileController = require('./controllers/ProfileController')
+const Profile = require('./model/Profile')
+
 
 // resquest, response
 // routes.get('/', (request, response) => {
     // console.log(__dirname + "/views/index.html")
 //     return response.sendFile(basePath + "/index.html")
 // })
-
-const views = __dirname + "/views/"
-
-const Profile = {
-    data: 
-    {
-        name: "Lucas Lima",
-        // avatar: "https://avatars.githubusercontent.com/u/69853124?v=4",
-        avatar: "https://github.com/lucasllimati.png",
-        "monthly-budget": 3000,
-        "days-per-week": 5,
-        "hours-per-day": 5,
-        "vacation-per-year": 4,
-        "value-hour": 75
-    },
-
-    controllers: {
-        index(req, res) {
-            return res.render(views + "profile", {profile: Profile.data})
-        },
-        
-        update(req, res) {
-            // req.body para pegar os dados
-            const data = req.body
-
-            // Definir quantas semanas tem um ano: 52
-            const weeksPerYear = 52
-
-            // Remover as semanas de férias do ano, para pegar quantas semanas tem em 1 mês
-            const weeksPerMonth = (weeksPerYear - data["vacation-per-year"]) / 12
-
-            // Total de hroas trabalhadas na semana
-            const weekTotalHours = data["hours-per-day"] * data["days-per-week"]
-
-            // Horas trabalhadas no mês
-            const monthlyTotalHours = weekTotalHours * weeksPerMonth
-
-            // Valor da hora trabalhada
-            const valueHour = data["monthly-budget"] / monthlyTotalHours
-
-            Profile.data = {
-                ...Profile.data,
-                ...req.body,
-                "value-hour": valueHour,
-            }
-            return res.redirect('/profile')
-        }
-    }
-}
 
 const Job = {
     data: [
@@ -85,14 +39,14 @@ const Job = {
                     ...job,
                     remaining,
                     status,
-                    budget: Job.services.calculateBudget(job, Profile.data["value-hour"])
+                    budget: Job.services.calculateBudget(job, Profile.get()["value-hour"])
                 }
             })
-            return res.render(views + "index", {jobs: updateJobs })
+            return res.render("index", {jobs: updateJobs })
         },
 
         create(req, res) {
-            return res.render(views + "job")
+            return res.render("job")
         },
 
         save(req,res) {
@@ -121,7 +75,7 @@ const Job = {
 
             job.budget = Job.services.calculateBudget(job, Profile.data["value-hour"])
 
-            return res.render(views + "job-edit", { job })
+            return res.render("job-edit", { job })
         },
 
         update(req, res) {
@@ -191,8 +145,8 @@ routes.post('/job', Job.controllers.save)
 routes.get('/job/:id', Job.controllers.show)
 routes.post('/job/:id', Job.controllers.update)
 routes.post('/job/delete/:id', Job.controllers.delete)
-routes.get('/profile', Profile.controllers.index)
-routes.post('/profile', Profile.controllers.update)
+routes.get('/profile', ProfileController.index)
+routes.post('/profile', ProfileController.update)
 
 routes.get('/', (req, res) => {
     return res.redirect('/')
