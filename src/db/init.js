@@ -1,5 +1,7 @@
 const Database = require('./config')
 
+// PARA VISUALIZAR BAIXAR E ACESSAR O BEEKEEPER STUDIO E VISUALIZAR O ARQUIVO BANCO DATABASE.SQLITE
+
 const initDb = {
     async init(){
         const db = await Database()
