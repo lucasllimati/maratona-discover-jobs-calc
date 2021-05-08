@@ -21,6 +21,11 @@
   <img alt="jobscalc" src="./public/images/jobscalc.png" width="100%">
 </p>
 
+## 📇 Contato
+ [![Linkedin](https://img.shields.io/badge/Linkedin-lucasllimati-blue.svg)](https://www.linkedin.com/in/lucasllimati/)
+ [![Instagram](https://img.shields.io/badge/Instagram-olukaslima_-ff69b4.svg)](https://www.instagram.com/olukaslima_)
+ [![Linktree](https://img.shields.io/badge/Linktree-lucasllimati-brightgreen.svg)](https://linktr.ee/lucasllimati)
+
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
