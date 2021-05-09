@@ -28,6 +28,7 @@
 [![Linktree Badge](https://img.shields.io/badge/-Linktree-39E09B?style=flat-square&labelColor=39E09B&logo=Linktree&logoColor=white&link=https://linktr.ee/lucasllimati)](https://linktr.ee/lucasllimati)
 [![Notion Badge](https://img.shields.io/badge/-Notion-000000?style=flat-square&labelColor=000000&logo=Linktree&logoColor=white&link=https://www.notion.so/Lucas-Louren-o-de-Lima-9b861c29195143f0a522968c03baddc0)](https://www.notion.so/Lucas-Louren-o-de-Lima-9b861c29195143f0a522968c03baddc0)
 
+
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
